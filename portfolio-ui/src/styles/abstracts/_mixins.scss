@@ -1,0 +1,111 @@
+//*************Sizing************
+
+@mixin fullSize{
+    width: 100%;
+    height: 100%;
+  }
+  
+  //*************Alignment*******************
+  
+  @mixin flexCenterCenter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin flexCenterStart {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+  }
+  
+  @mixin flexCenterEnd {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+  }
+  
+  @mixin flexCenterSpaceBetween {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
+  
+  @mixin flexCenterSpaceAround {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+  }
+  
+  @mixin flexCenterSpaceEvenly {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+  }
+  
+  @mixin flexEndSpaceBetween {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+  }
+  
+  @mixin flexStartSpaceBetween {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+  }
+  
+  @mixin flexStartCenter {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+  }
+
+  @mixin flexStartStart{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  @mixin flexColumnStart{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  @mixin flexColumnCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @mixin flexColumnSpaceAround{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @mixin flexColumnSpaceBetween{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @mixin flexColumnEnd{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }

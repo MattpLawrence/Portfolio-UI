@@ -1,0 +1,128 @@
+@import 'mixins';
+
+:root {
+    --default-50: rgb(230, 238, 247);
+    --default-100: rgb(177, 202, 230);
+    --default-200: rgb(140, 176, 218);
+    --default-300: rgb(87, 140, 201);
+    --default-400: rgb(54, 118, 191);
+    --default-500: rgb(4, 84, 175);
+    --default-600: rgb(4, 76, 159);
+    --default-700: rgb(3, 60, 124);
+    --default-800: rgb(2, 46, 96);
+    --default-900: rgb(2, 35, 74);
+  }
+
+//For info on how to make and name new variables please refer to the readme file in the styles folder
+
+//*************************************Colors*************************************//
+$color-primary-background: #ffffff;
+$color-contrast-background: rgb(242, 242, 242);
+$color-BCS-background: rgb(154, 143, 248);
+$color-BCS-text: #1565c0;
+$color-text: #2d243a;
+$color-scrollbar: #c2c2c2;
+$color-white: #ffffff;
+$main-nav-color: rgba(26, 34, 38, 1);
+
+//default blue pallet
+$default-50: var(--default-50);
+$default-100: var(--default-100);
+$default-200: var(--default-200);   
+$default-300: var(--default-300);
+$default-400: var(--default-400);
+$default-500: var(--default-500);
+$default-600: var(--default-600);
+$default-700: var(--default-700);
+$default-800: var(--default-800);
+$default-900: var(--default-900);
+$input-background-default: rgba(4, 84, 175, .05);
+
+//Green / success pallet
+$green-50: rgb(231, 239, 237);
+$green-100: rgb(180, 204, 198);
+$green-200: rgb(144, 180, 170);
+$green-300: rgb(93, 145, 132);
+$green-400: rgb(61, 124, 108);
+$green-500: rgb(13, 91, 71);
+$green-600: rgb(12, 83, 65);
+$green-700: rgb(9, 65, 50);
+$green-800: rgb(7, 50, 39);
+$green-900: rgb(5, 38, 30);
+
+//Red / success pallet
+$red-50: rgb(248, 235, 236);
+$red-100: rgb(232, 193, 197);
+$red-200: rgb(221, 163, 169);
+$red-300: rgb(205, 121, 130);
+$red-400: rgb(196, 95, 105);
+$red-500: rgb(181, 55, 68);
+$red-600: rgb(165, 50, 62);
+$red-700: rgb(129, 39, 48);
+$red-800: rgb(100, 30, 37);
+$red-900: rgb(76, 23, 29);
+$input-background-red: rgba(181, 55, 68, .05);
+
+//Yellow / Orange pallet
+$orange-50: rgb(255, 245, 231);
+$orange-100: rgb(255, 225, 179);
+$orange-200: rgb(255, 210, 143);
+$orange-300: rgb(255, 190, 92);
+$orange-400: rgb(255, 177, 60);
+$orange-500: rgb(255, 158, 11);
+$orange-600: rgb(232, 144, 10);
+$orange-700: rgb(181, 112, 8);
+$orange-800: rgb(140, 87, 6);
+$orange-900: rgb(107, 66, 5);
+
+//Link blue pallet
+$link-blue-50: rgb(231, 238, 247);
+$link-blue-100: rgb(180, 204, 230);
+$link-blue-200: rgb(144, 179, 218);
+$link-blue-300: rgb(93, 144, 201);
+$link-blue-400: rgb(61, 122, 190);
+$link-blue-500: rgb(13, 89, 174);
+$link-blue-600: rgb(12, 81, 158);
+$link-blue-700: rgb(9, 63, 124);
+$link-blue-800: rgb(7, 49, 96);
+$link-blue-900: rgb(5, 37, 73);
+
+//Link violet pallet
+$link-violet-50: rgb(239, 232, 245);
+$link-violet-100: rgb(205, 184, 222);
+$link-violet-200: rgb(181, 150, 207);
+$link-violet-300: rgb(148, 102, 185);
+$link-violet-400: rgb(127, 72, 171);
+$link-violet-500: rgb(95, 26, 150);
+$link-violet-600: rgb(86, 24, 137);
+$link-violet-700: rgb(67, 18, 107);
+$link-violet-800: rgb(52, 14, 83);
+$link-violet-900: rgb(40, 11, 63);
+
+//Neutrals
+$off-white: rgb(251, 249, 247);
+$off-white-100: rgb(245, 239, 234);
+$white: rgb(255, 255, 255);
+$gray: rgb(236, 238, 239);
+$gray-50: rgb(236, 238, 239);
+$gray-100: rgb(195, 201, 204);
+$gray-200: rgb(166, 175, 179);
+$gray-300: rgb(125, 138, 144);
+$gray-400: rgb(100, 116, 123);
+$gray-500: rgb(61, 81, 90);
+$gray-600: rgb(56, 74, 82);
+$gray-700: rgb(43, 58, 64);
+$gray-800: rgb(34, 45, 50);
+$gray-900: rgb(26, 34, 38);
+$gray-background: rgba(247, 247, 247, 1);
+$text-menu: #3C4D6A;
+$text-smallest: #52636B;
+$input-background-gray: rgba(247, 247, 247, 0.2);
+
+//***************************Breakpoints***************************//
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

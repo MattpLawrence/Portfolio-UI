@@ -1,0 +1,197 @@
+@import "../abstracts/variables";
+
+
+//set parent element to relative
+.hasTooltip{
+    position: relative;
+  
+    &:hover > *{
+      visibility: visible;
+      opacity: 1;
+    }
+}
+
+  
+@mixin tooltipBase($left, $bottom, $right, $top, $translateLeft, $translateBottom, $marginLeft, $marginTop, $marginRight, $marginBottom) {
+    visibility: hidden;
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+    top: $top;
+    right: $right;
+    margin-left: $marginLeft;
+    margin-top: $marginTop;
+    margin-right: $marginRight;
+    margin-bottom: $marginBottom;
+    z-index: 1;
+    min-width: 8rem;
+    background-color: $gray-500;
+    color: $color-white;
+    border-radius: .25rem;
+    padding: .375rem .5rem;
+    transform: translate( $translateLeft, $translateBottom);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+}
+
+@mixin carrotBase{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: $gray-500 transparent transparent transparent;
+}
+
+
+
+.rightStart{
+@include tooltipBase(100%, 100%, unset, unset, 0%, 50%, 1rem, 0, unset, unset);
+
+&:after{
+    @include carrotBase;
+    top: 50%;
+    right: 100%;
+    margin-top: 0rem;
+    border-width: .375rem;
+    transform: rotate(90deg);
+}
+}
+
+.rightCenter{
+@include tooltipBase(100%, 50%, unset, unset, 0%, 50%, 1rem, 0, unset, unset);
+
+&:after{
+    @include carrotBase;
+    top: 50%;
+    right: 100%;
+    margin-top: -.3125rem;
+    border-width: .375rem;
+    transform: rotate(90deg);
+}
+}
+
+.rightEnd{
+@include tooltipBase(100%, unset, unset, 100%, 0%, -50%, 1rem, 0, unset, unset);
+
+&:after{
+    @include carrotBase;
+    top: 50%;
+    right: 100%;
+    margin-top: -.625rem;
+    border-width: .375rem;
+    transform: rotate(90deg);
+}
+}
+
+.leftStart{
+@include tooltipBase(unset, 100%, 100%, unset, 0%, 50%, unset, 0, 1rem, unset);
+
+&:after{
+    @include carrotBase;
+    top: 50%;
+    left: 100%;
+    margin-top: 0rem;
+    border-width: .375rem;
+    transform: rotate(270deg);
+}
+}
+
+.leftCenter{
+@include tooltipBase(unset, 50%, 100%, unset, 0%, 50%, unset, 0, 1rem, unset);
+
+&:after{
+    @include carrotBase;
+    top: 50%;
+    left: 100%;
+    margin-top: -.3125rem;
+    border-width: .375rem;
+    transform: rotate(270deg);
+}
+}
+
+.leftEnd{
+@include tooltipBase(unset, unset, 100%, 100%, 0%, -50%, unset, 0, 1rem, unset);
+
+&:after{
+    @include carrotBase;
+    top: 50%;
+    left: 100%;
+    margin-top: -.625rem;
+    border-width: .375rem;
+    transform: rotate(270deg);
+}
+}
+
+.topStart{
+@include tooltipBase(unset, 100%, 100%, unset, 10%, 0%, unset, unset, unset, 1rem);
+
+&:after{
+    @include carrotBase;
+    top: 100%;
+    right: 8%;
+    margin-right: -.3125rem;
+    border-width: .375rem;
+}
+}
+
+.topCenter{
+@include tooltipBase(unset, 100%, 50%, unset, 50%, 0%, unset, unset, unset, 1rem);
+
+&:after{
+    @include carrotBase;
+    top: 100%;
+    right: 50%;
+    margin-right: -.3125rem;
+    border-width: .375rem;
+}
+}
+
+.topEnd{
+@include tooltipBase(100%, 100%, unset, unset, -10%, 0%, unset, unset, unset, 1rem);
+
+&:after{
+    @include carrotBase;
+    top: 100%;
+    left: 8%;
+    margin-left: -.3125rem;
+    border-width: .375rem;
+}
+}
+
+.bottomStart{
+@include tooltipBase(unset, unset, 100%, 100%, 10%, 0%, unset, 1rem, unset, unset);
+
+&:after{
+    @include carrotBase;
+    bottom: 100%;
+    right: 8%;
+    margin-right: -.3125rem;
+    border-width: .375rem;
+    transform: rotate(180deg);
+}
+}
+
+.bottomCenter{
+@include tooltipBase(unset, unset, 50%, 100%, 50%, 0%, unset, 1rem, unset, unset);
+
+&:after{
+    @include carrotBase;
+    bottom: 100%;
+    right: 50%;
+    margin-right: -.3125rem;
+    border-width: .375rem;
+    transform: rotate(180deg);
+}
+}
+
+.bottomEnd{
+@include tooltipBase(100%, unset, unset, 100%, -10%, 0%, unset, 1rem, unset, unset);
+
+&:after{
+    @include carrotBase;
+    bottom: 100%;
+    left: 8%;
+    margin-left: -.3125rem;
+    border-width: .375rem;
+    transform: rotate(180deg);
+}
+}

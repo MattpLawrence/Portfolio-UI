@@ -1,0 +1,53 @@
+@import "./abstracts/variables";
+
+// scroll bar styles
+*::-webkit-scrollbar {
+  height: 12px;
+  width: 8px;
+  left: -4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $color-scrollbar;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0px;
+  background-color: #ffffff;
+}
+
+//General styles
+
+.card {
+  margin: 1rem;
+}
+
+
+html {
+  font-size: 16px; /* Default root font size */
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  html {
+    font-size: 18px; 
+  }
+}
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.selectContainer , .inputContainer{
+  .inputLabel{
+    margin-bottom: 0.5rem;
+  }
+}

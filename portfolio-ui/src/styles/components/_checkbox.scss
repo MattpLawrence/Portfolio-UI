@@ -1,0 +1,33 @@
+@import "../abstracts/variables";
+
+.checkboxContainer{
+
+    //adjustments to address the size of the MUI checkbox
+    margin-top: -.5rem;
+    margin-bottom: .5rem;
+
+    .checkboxInnerContainer{
+        @include flexStartStart;
+        width: fit-content;
+        margin-bottom: -.375rem;
+        
+        &:hover{
+            cursor: pointer;
+        }
+
+        .checkbox{
+            margin-left: -.625rem;
+        }
+        .inputLabel{
+            height: 2.625rem;
+            user-select: none;
+            @include flexCenterStart;
+            margin-bottom: -.375rem ;
+
+            &.disabled{
+                color: $gray-400;
+            }
+        }
+    }
+}
+

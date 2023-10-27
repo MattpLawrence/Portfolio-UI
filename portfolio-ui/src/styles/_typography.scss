@@ -1,0 +1,109 @@
+@mixin typography($size, $weight, $lineHeight, $font-family, $marginBottom, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+    font-family: $font-family, sans-serif;
+    margin-bottom: $marginBottom;
+    margin-top: 0;
+    color: $color;
+  }
+  
+  //************************************Headers************************************
+  h1{
+      @include typography(2.5rem, 700, 3.375rem, 'Roboto Slab', 0, $gray-900);
+  }
+  
+  h2{
+      @include typography(2rem, 700, 2.75rem,'Roboto Slab', 0, $gray-900);
+  }
+  
+  h3{
+      @include typography(1.5rem, 700, 2.0625rem,'Roboto Slab', 0, $gray-900);
+  }
+  
+  h4{
+      @include typography(1.125rem, 600, 1.6875rem,'Roboto Slab', 0, $gray-900);
+  }
+  
+  h5{
+      @include typography(1rem, 600, 1.75rem,'Roboto Slab', 0, $gray-900);
+  }
+  
+  h6{
+      @include typography(.875rem, 600, 1.5rem,'Roboto Slab', 0, $gray-900);
+  }
+  
+  //****************************Body**************************
+
+  p{
+      @include typography(1rem, 400, 1.75rem,'Open Sans',0, $gray-500);
+  }
+
+  li{
+      @include typography(1rem, 400, 1.75rem,'Open Sans', .25rem, $gray-500);
+  }
+  
+  .body-1{
+      @include typography(1rem, 400, 1.625rem,'Open Sans', 0, $gray-500);
+  }
+
+  .body-1-bold{
+      @include typography(1rem, 700, 1.625rem,'Open Sans', 0, $gray-500);
+  }
+  
+  .body-2{
+      @include typography(.875rem, 400, 1.125rem,'Open Sans', 0, $gray-500);
+  }
+
+  .body-2-bold{
+      @include typography(.875rem, 700, 1.125rem,'Open Sans', 0, $gray-500);
+  }
+  
+  //****************************Other**************************
+  .subtitle-1 {
+      @include typography(1.25rem, 400, 1.75rem,'Open Sans', 0rem, $gray-500);
+  }
+  
+  .caption-1{
+      @include typography(1rem, 600, 1.65rem,'Open Sans', 0rem, $gray-900);
+  }
+  
+  .caption-2 {
+      @include typography(.875rem, 600, 1.375rem,'Open Sans', 0rem, $gray-900);
+  }
+  
+  .description {
+      @include typography(1rem, 400, 1.25rem,'Open Sans', 0rem, $gray-500);
+  }
+  
+  .placeholder {
+      @include typography(1rem, 400, 1.625rem,'Open Sans', 0rem, $gray-300);
+  }
+  
+  .menu {
+      @include typography(1rem, 600, 1.75rem,'Open Sans', 0rem, $text-menu);
+  }
+
+  .smallest {
+      @include typography(.75rem, 600, 1.125rem,'Open Sans', 0rem, $text-smallest);
+  }
+
+  //*************************Functional elements***********************
+  
+  .link-1 {
+      @include typography(1rem, 400, 1.75rem,'Open Sans', 0, $link-blue-500);
+      
+      &:visited{
+        @include typography(1rem, 400, 1.75rem,'Open Sans', 0, $link-violet-500); 
+      }
+  }
+
+  .link-2 {
+      @include typography(.875rem, 400, 1.5rem,'Open Sans', 0, $link-blue-500);
+      &:visited{
+        @include typography(.875rem, 400, 1.5rem,'Open Sans', 0, $link-violet-500);
+      }
+  }
+
+  
+  

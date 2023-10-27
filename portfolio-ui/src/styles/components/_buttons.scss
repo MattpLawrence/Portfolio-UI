@@ -1,0 +1,172 @@
+@import "../abstracts/variables";
+
+//set up basic button layout
+@mixin buttonBase($fontSize, $paddingX, $paddingY) {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-wrap: break-word;
+  border-radius: 0rem;
+  font-size: $fontSize;
+  padding: $paddingX $paddingY;
+  // margin-bottom: 1rem;
+
+  .mat-icon {
+    font-size: calc($fontSize + 0.25rem);
+    height: calc($fontSize + 0.375rem);
+  }
+
+  > .startIcon{
+    margin-right: 0.5rem;
+  }
+
+  > .endIcon{
+    margin-left: 0.5rem;
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+@mixin buttonContained(
+  $backgroundColor,
+  $color,
+  $hoverBackgroundColor,
+  $activeBackgroundColor
+) {
+  background-color: $backgroundColor;
+  color: $color;
+  border: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $hoverBackgroundColor;
+  }
+  &:active {
+    background-color: $activeBackgroundColor;
+  }
+  &:focus-visible {
+    border-radius: 0.125rem;
+    outline-offset: 0.125rem;
+    outline: 0.125rem solid $default-500;
+  }
+}
+
+@mixin buttonOutlined(
+  $borderColor,
+  $color,
+  $hoverBackgroundColor,
+  $activeBackgroundColor
+) {
+  background-color: transparent;
+  color: $color;
+  border: 0.125rem solid $default-500; //use outline as border until focus-visible for alignment purposes
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $hoverBackgroundColor;
+    outline-color: $hoverBackgroundColor;
+    border-color: $hoverBackgroundColor; //do not remove border for alignment purposes, just match color
+  }
+  &:active {
+    background-color: $activeBackgroundColor;
+    outline-color: $activeBackgroundColor;
+  }
+  &:focus-visible {
+    background-color: $hoverBackgroundColor;
+    border-radius: 0.125rem;
+    border: 0.125rem solid $borderColor;
+    outline-offset: 0.125rem;
+    outline: 0.125rem solid $default-500;
+  }
+}
+
+@mixin buttonText(
+  $borderColor,
+  $color,
+  $hoverBackgroundColor,
+  $activeBackgroundColor
+) {
+  background-color: transparent;
+  color: $color;
+  border: 0.0625rem solid transparent; //set border to transparent to keep alignment
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $hoverBackgroundColor;
+    outline-color: $hoverBackgroundColor; //do not remove border for alignment purposes, just match color
+  }
+  &:active {
+    background-color: $activeBackgroundColor;
+    outline-color: $activeBackgroundColor;
+  }
+  &:focus-visible {
+    background-color: $hoverBackgroundColor;
+    border-radius: 0.125rem;
+    outline-offset: 0.125rem;
+    outline: 0.125rem solid $default-500;
+  }
+}
+
+
+Button {
+  // the three button sizes
+  &.buttonSmall {
+    @include buttonBase(1rem, 0.625rem, 1.125rem);
+  }
+
+  &.buttonMedium {
+    @include buttonBase(1.125rem, 0.875rem, 1.5rem);
+  }
+
+  &.buttonLarge {
+    @include buttonBase(1.25rem, 1rem, 1.5rem);
+  }
+
+  //the button variants
+  &.buttonDefault {
+    @include buttonContained($default-500, $color-white, $default-700, $default-800);
+  }
+
+  &.buttonSecondary {
+    @include buttonOutlined($default-500,$default-500, $default-50, $default-100);
+  }
+
+  &.buttonTertiary {
+    @include buttonText($gray-700, $gray-700, $gray-50, $gray-100);
+  }
+
+  &.buttonSuccess {
+    @include buttonContained($green-500, $color-white, $green-700, $green-800);
+  }
+
+  &.buttonDestructive {
+    @include buttonContained($red-500, $color-white, $red-700, $red-800);
+  }
+
+  &.buttonDestructiveSecondary {
+    @include buttonText($red-700, $red-700, $red-50, $red-100);
+  }
+
+  &.buttonDisabled {
+    @include buttonContained($gray-300, $color-white, $gray-300, $gray-300);
+    &:hover{
+      cursor: unset;
+    }
+  }
+
+  //set full width
+  &.fullWidth {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
