@@ -1,2 +1,13 @@
-@import "./package/styles/styles.scss";
+@import "./styles/styles.scss";
 
+
+.App{
+    padding-top: 4rem;
+}
+
+#mainContent{
+    height: 140vh;
+    > * {
+        // margin-top: 64px; //compensate for fixed height header
+    }
+}
