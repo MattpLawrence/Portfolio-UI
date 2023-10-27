@@ -1,16 +1,19 @@
 @import 'mixins';
 
 :root {
-    --default-50: rgb(230, 238, 247);
-    --default-100: rgb(177, 202, 230);
-    --default-200: rgb(140, 176, 218);
-    --default-300: rgb(87, 140, 201);
-    --default-400: rgb(54, 118, 191);
-    --default-500: rgb(4, 84, 175);
-    --default-600: rgb(4, 76, 159);
-    --default-700: rgb(3, 60, 124);
-    --default-800: rgb(2, 46, 96);
-    --default-900: rgb(2, 35, 74);
+
+  --default-50: rgb(135, 169, 233);
+  --default-100: rgb(99, 134, 199);
+  --default-200: rgb(79, 112, 172);
+  --default-300: rgb(61, 90, 145);
+  --default-400: rgb(49, 74, 121);
+  // --default-500: rgb(45, 69, 113);
+  --default-500: rgb(4, 129, 158);
+  --default-600: rgb(33, 54, 90);
+  --default-700: rgb(26, 43, 72);
+  --default-800: rgb(19, 32, 54);
+  --default-900: rgb(13, 22, 36);
+  
   }
 
 //For info on how to make and name new variables please refer to the readme file in the styles folder
@@ -18,25 +21,44 @@
 //*************************************Colors*************************************//
 $color-primary-background: #ffffff;
 $color-contrast-background: rgb(242, 242, 242);
-$color-BCS-background: rgb(154, 143, 248);
-$color-BCS-text: #1565c0;
 $color-text: #2d243a;
 $color-scrollbar: #c2c2c2;
 $color-white: #ffffff;
 $main-nav-color: rgba(26, 34, 38, 1);
+$input-background-default: rgba(4, 84, 175, .05);
+
 
 //default blue pallet
-$default-50: var(--default-50);
-$default-100: var(--default-100);
-$default-200: var(--default-200);   
-$default-300: var(--default-300);
-$default-400: var(--default-400);
-$default-500: var(--default-500);
-$default-600: var(--default-600);
-$default-700: var(--default-700);
-$default-800: var(--default-800);
-$default-900: var(--default-900);
-$input-background-default: rgba(4, 84, 175, .05);
+
+$default-50: #e2ecf4;
+$default-100: #b6d1e4;
+$default-200: #85b2d2;
+$default-300: #5493bf;
+$default-400: #2f7bb2;
+$default-500: #0a64a4;
+$default-600: #095c9c;
+$default-700: #075292;
+$default-800: #054889;
+$default-900: #033678;
+$default-Contrast-50-300: #000000;
+$default-Contrast-400-900: #ffffff;
+
+
+//contrast color pallet
+
+$contrast-50: #fff7e0;
+$contrast-100: #ffecb3;
+$contrast-200: #ffdf80;
+$contrast-300: #ffd24d;
+$contrast-400: #ffc826;
+$contrast-500: #ffbe00;
+$contrast-600: #ffb800;
+$contrast-700: #ffaf00;
+$contrast-800: #ffa700;
+$contrast-900: #ff9900;
+$contrast-Contrast: #000000;
+
+
 
 //Green / success pallet
 $green-50: rgb(231, 239, 237);
